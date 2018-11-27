@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level1</title>
+</head>
+
+<body>
+    <div id="parent">
+        <button id="button1">右移</button>
+        <button id="button2">左移</button>
+        <button id="button3">上移</button>
+        <button id="button4">下移</button>
+        <button id="button5">放大</button>
+        <button id="button6">缩小</button>
+    </div>
+    <script>
+        var dEle = document.createElement("div")
+        var element = document.querySelector('#parent')
+        element.appendChild(dEle)
+        dEle.style.background = "pink"
+        dEle.style.width = "100px"
+        dEle.style.height = "100px"
+        //动态创建div
+        var a = 0;
+        var b = 0;
+        var c = 0;
+
+        var button1 = document.querySelector('#button1')
+        button1.onclick = function () {
+            a = a + 40;
+            dEle.style.MozTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.WebkitTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.transition = "-moz-transform 500ms"
+            dEle.style.transition = "-webkit-transform 500ms"
+        }
+        //右移
+        var button2 = document.querySelector('#button2')
+        button2.onclick = function () {
+            a = a - 40;
+            dEle.style.MozTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.WebkitTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.transition = "-moz-transform 500ms"
+            dEle.style.transition = "-webkit-transform 500ms"
+        }
+        //左移
+        var button3 = document.querySelector('#button3')
+        button3.onclick = function () {
+            b = b - 40;
+            dEle.style.MozTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.WebkitTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.transition = "-moz-transform 500ms"
+            dEle.style.transition = "-webkit-transform 500ms"
+        }
+        //上移
+        var button4 = document.querySelector('#button4')
+        button4.onclick = function () {
+            b = b + 40;
+            dEle.style.MozTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.WebkitTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.transition = "-moz-transform 500ms"
+            dEle.style.transition = "-webkit-transform 500ms"
+
+        }
+        //下移
+        var c = 1;
+        var button5 = document.querySelector('#button5')
+        button5.onclick = function () {
+            c = c + 0.5;
+            dEle.style.MozTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.WebkitTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.transition = "-moz-transform 500ms"
+            dEle.style.transition = "-webkit-transform 500ms"
+        }
+        //放大
+        var button6 = document.querySelector('#button6')
+        button6.onclick = function () {
+            c = c - 0.5;
+            dEle.style.MozTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.WebkitTransform = "translate(" + a + "px," + b + "px) scale(" + c + ")"
+            dEle.style.transition = "-moz-transform 500ms"
+            dEle.style.transition = "-webkit-transform 500ms"
+        }
+        //缩小
+    </script>
+</body>
+
+</html>

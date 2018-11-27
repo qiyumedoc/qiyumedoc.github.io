@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level1-1</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <button id="top">返回顶部</button>
+
+    <div class="block1"></div>
+    <div class="block2"></div>
+    <div class="block3"></div>
+    <div class="block4"></div>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                document.querySelector("#top").style.display = "block";
+            } else {
+                document.querySelector("#top").style.display = "none";
+            }
+        }
+        //浏览器滚动到800px时才显示按钮
+        var top = document.querySelector('#top')
+        top.addEventListener('click', function () {
+            timer = setInterval(function () {
+                var goTop = document.body.scrollTop || document.documentElement.scrollTop;
+                if (goTop > 0) {
+                    var speed = Math.floor(-goTop / 6);
+                    document.body.scrollTop = document.documentElement.scrollTop = goTop + speed;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 25)
+        })
+        //返回顶部的速度根据点击时距离顶部的高度而不同
+    </script>
+</body>
+
+</html>
