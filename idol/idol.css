@@ -1,0 +1,64 @@
+.container{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-inner{
+    width: 1140px;
+    background-color: #eee;
+    font-size: 30px;
+    /* text-align: center; */
+}
+
+h1{
+    text-align: center;
+}
+
+.h2{
+    font-size: 20px;
+    text-align: center;
+}
+/* 图片 */
+.image{
+    width: 1010px;
+    height:614px;
+    background: url("./idol-images/sts.jpg");
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.introduce{
+    width: 1010px;
+    font-size: 18px;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.down{
+    width:680px;
+    margin: 0 auto;
+}
+
+.life{
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+li{
+    font-size: 14px;
+    color:rgb(92, 90, 90);
+}
+p{
+    font-size:17.5px;
+}
+
+footer{
+    font-size: 14px;
+    color: gray;
+}
+
+.more{
+    font-size:20px;
+}
